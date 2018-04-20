@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Virus';
-  src: url('../../fonts/Virus_01.ttf')
+  src: url('../../fonts/Virus_01.ttf');
 }
 
 html {
@@ -50,7 +50,8 @@ a {
 
   &:hover,
   &:focus {
-    color: $primary-color;
-    text-shadow: 0 0 0.125rem $primary-color;
+    color: $secondary-color;
+    text-shadow: 1px 1px 0.125rem $primary-color, -1px 1px 0 white,
+      1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white;
   }
 }

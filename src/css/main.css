@@ -170,8 +170,8 @@ a {
   text-decoration: none;
   text-shadow: 0 0 0.125rem #9cffcc; }
   .link:hover, .link:focus {
-    color: #00ff7c;
-    text-shadow: 0 0 0.125rem #00ff7c; }
+    color: #03003b;
+    text-shadow: 1px 1px 0.125rem #00ff7c, -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white; }
 
 .site-header {
   display: flex;
@@ -191,17 +191,18 @@ a {
   font-family: 'Virus', sans-serif;
   text-transform: uppercase;
   font-size: 4rem;
-  color: white; }
+  color: white;
+  transform: translateX(0.5rem); }
 
 .site-header__link {
   text-align: center;
   color: white;
   text-shadow: 0 0 1rem #9cffcc;
-  transition: 0.4s; }
+  transition: 0.2s; }
   .site-header__link:hover, .site-header__link:focus {
-    color: #9cffcc;
-    animation: glitch .4s forwards;
-    text-shadow: 0 0 0.5rem #03003b; }
+    animation: glitch 0.4s;
+    color: #03003b;
+    text-shadow: 1px 1px 0.125rem #00ff7c, -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white; }
 
 .nav-menu {
   display: flex;
@@ -210,12 +211,13 @@ a {
   align-items: stretch; }
 
 .nav-menu__item {
+  text-transform: uppercase;
   padding: 1rem;
-  width: 8rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 4rem; }
+  height: 4rem;
+  font-size: 1.5rem; }
 
 @media screen and (min-width: 720px) {
   .site-header {
@@ -274,6 +276,13 @@ a {
     background: #03003b;
     background: linear-gradient(145deg, #03003b 0%, #00ff7c 100%);
     opacity: 0.5; }
+
+.hero-text {
+  display: block;
+  font-size: 10vw;
+  position: absolute;
+  color: white;
+  z-index: 1; }
 
 .img {
   width: 100%; }

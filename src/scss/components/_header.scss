@@ -23,17 +23,20 @@
   text-transform: uppercase;
   font-size: 4rem;
   color: white;
+  transform: translateX(.5rem)
 }
 .site-header__link {
   text-align: center;
   color: white;
   text-shadow: 0 0 1rem $primary-color-light;
-  transition: 0.4s;
+  transition: 0.2s;
+
   &:hover,
   &:focus {
-    color: $primary-color-light;
-    animation: glitch .4s forwards;
-    text-shadow: 0 0 0.5rem $secondary-color;
+    animation: glitch 0.4s;
+    color: $secondary-color;
+    text-shadow: 1px 1px 0.125rem $primary-color, -1px 1px 0 white,
+      1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white;
   }
 }
 
@@ -45,12 +48,13 @@
 }
 
 .nav-menu__item {
+  text-transform: uppercase;
   padding: 1rem;
-  width: 8rem;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 4rem;
+  font-size: 1.5rem;
 }
 
 @media screen and (min-width: 720px) {

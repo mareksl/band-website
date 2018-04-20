@@ -45,7 +45,13 @@
     opacity: 0.5;
   }
 }
-
+.hero-text {
+  display: block;
+  font-size: 10vw;
+  position: absolute;
+  color: white;
+  z-index: 1;
+}
 .img {
   width: 100%;
 }
