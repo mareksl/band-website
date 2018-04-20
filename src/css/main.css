@@ -200,7 +200,7 @@ a {
   transition: 0.4s; }
   .site-header__link:hover, .site-header__link:focus {
     color: #9cffcc;
-    animation: glitch 0.4s forwards;
+    animation: glitch .4s forwards;
     text-shadow: 0 0 0.5rem #03003b; }
 
 .nav-menu {
@@ -234,27 +234,88 @@ a {
   33% {
     filter: blur(0.25rem);
     transform: translateX(2px) translateY(2px); }
-  75% {
+  60% {
     filter: blur(0rem);
-    transform: translateX(-4px) translateY(0); }
-  80% {
+    transform: translateX(-4px) translateY(0);
+    opacity: 1; }
+  70% {
+    opacity: 0; }
+  75% {
+    opacity: 1; }
+  76% {
+    opacity: 0; }
+  90% {
     filter: blur(0.125rem);
-    transform: translateX(4px) translateY(0); }
+    transform: translateX(4px) translateY(0);
+    opacity: 1; }
   100% {
     filter: blur(0);
     transform: translateX(0) translateY(0); } }
 
 .content-section {
+  position: relative;
   padding: 2rem;
-  margin: 2rem;
-  border-radius: 0.125rem; }
+  margin: 2rem; }
 
 .img-wrapper {
+  position: relative;
   max-height: 32rem;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center; }
+  .img-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #03003b;
+    background: linear-gradient(145deg, #03003b 0%, #00ff7c 100%);
+    opacity: 0.5; }
 
 .img {
   width: 100%; }
+
+.hero-img {
+  filter: grayscale(1); }
+
+.event-list {
+  display: flex;
+  flex-flow: column; }
+
+.event-list__item {
+  position: relative;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white; }
+  .event-list__item::before {
+    content: '';
+    position: absolute;
+    top: -0.125rem;
+    top: 0;
+    bottom: -0.125rem;
+    right: -0.125rem;
+    right: 0;
+    left: -0.125rem;
+    left: 0;
+    background: #03003b;
+    background: linear-gradient(45deg, #03003b 0%, #00ff7c 100%);
+    z-index: -1;
+    opacity: 0.5; }
+
+.event-list__title {
+  flex: 1 0 33%; }
+
+.event-list__location {
+  text-align: center;
+  flex: 0 1 33%; }
+
+.event-list__date {
+  text-align: right;
+  flex: 0 1 33%; }

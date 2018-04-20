@@ -10,6 +10,7 @@
     "gulp-sass": "^4.0.1"
   },
   "scripts": {
-    "dev": "gulp"
+    "dev": "gulp",
+    "build": "gulp build"
   }
 }

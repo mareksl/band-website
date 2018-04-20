@@ -25,13 +25,14 @@
   color: white;
 }
 .site-header__link {
-  text-align: center;  
+  text-align: center;
   color: white;
   text-shadow: 0 0 1rem $primary-color-light;
   transition: 0.4s;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: $primary-color-light;
-    animation: glitch 0.4s forwards;
+    animation: glitch .4s forwards;
     text-shadow: 0 0 0.5rem $secondary-color;
   }
 }
@@ -74,13 +75,24 @@
     filter: blur(0.25rem);
     transform: translateX(2px) translateY(2px);
   }
-  75% {
+  60% {
     filter: blur(0rem);
     transform: translateX(-4px) translateY(0);
+    opacity: 1;
   }
-  80% {
+  70% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  76% {
+    opacity: 0;
+  }
+  90% {
     filter: blur(0.125rem);
     transform: translateX(4px) translateY(0);
+    opacity: 1;
   }
   100% {
     filter: blur(0);
