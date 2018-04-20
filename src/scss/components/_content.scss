@@ -1,3 +1,18 @@
 .content-section {
-    padding: 2rem;
+  padding: 2rem;
+  margin: 2rem;
+  //   border: 1px solid $accent-light;
+  border-radius: 0.125rem;
+}
+
+.img-wrapper {
+  max-height: 32rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  width: 100%;
 }

@@ -1,3 +1,7 @@
+/* RGB */
+* {
+  box-sizing: border-box; }
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -126,6 +130,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@font-face {
+  font-family: 'Virus';
+  src: url("../../fonts/Virus_01.ttf"); }
+
 html {
   font-size: 16px; }
 
@@ -153,25 +161,100 @@ small,
 .font_small {
   font-size: 0.8em; }
 
+a {
+  color: inherit;
+  text-decoration: none; }
+
+.link {
+  color: #0c1713;
+  text-decoration: none;
+  text-shadow: 0 0 0.125rem #9cffcc; }
+  .link:hover, .link:focus {
+    color: #00ff7c;
+    text-shadow: 0 0 0.125rem #00ff7c; }
+
 .site-header {
   display: flex;
+  flex-flow: row wrap;
   width: 100%;
-  justify-content: space-between;
-  padding: 2rem; }
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 4rem;
+  border-bottom: 1px solid #00f5ff;
+  background: #03003b;
+  background: linear-gradient(145deg, #03003b 0%, #00ff7c 100%); }
+
+.site-header__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Virus', sans-serif;
+  text-transform: uppercase;
+  font-size: 4rem;
+  color: white; }
+
+.site-header__link {
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 1rem #9cffcc;
+  transition: 0.4s; }
+  .site-header__link:hover, .site-header__link:focus {
+    color: #9cffcc;
+    animation: glitch 0.4s forwards;
+    text-shadow: 0 0 0.5rem #03003b; }
 
 .nav-menu {
   display: flex;
   flex-flow: row wrap;
-  height: 100%;
-  justify-content: space-between;
+  justify-content: center;
   align-items: stretch; }
 
-.menu-item__link {
-  width: 16rem;
+.nav-menu__item {
+  padding: 1rem;
+  width: 8rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%; }
+  height: 4rem; }
+
+@media screen and (min-width: 720px) {
+  .site-header {
+    flex-flow: row wrap;
+    justify-content: space-between; } }
+
+.menu-item__link {
+  padding: 0 1rem;
+  text-shadow: 0 0 0.25rem white;
+  color: white; }
+
+@keyframes glitch {
+  0% {
+    filter: blur(0);
+    transform: translateX(0) translateY(0); }
+  33% {
+    filter: blur(0.25rem);
+    transform: translateX(2px) translateY(2px); }
+  75% {
+    filter: blur(0rem);
+    transform: translateX(-4px) translateY(0); }
+  80% {
+    filter: blur(0.125rem);
+    transform: translateX(4px) translateY(0); }
+  100% {
+    filter: blur(0);
+    transform: translateX(0) translateY(0); } }
 
 .content-section {
-  padding: 2rem; }
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 0.125rem; }
+
+.img-wrapper {
+  max-height: 32rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.img {
+  width: 100%; }

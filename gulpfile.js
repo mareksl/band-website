@@ -21,4 +21,19 @@ gulp.task('bs', ['sass'], () => {
   gulp.watch('./src/*.html').on('change', bs.reload);
 });
 
+gulp.task('build', ['sass'], () => {
+  return gulp
+    .src(
+      [
+        './src/*.html',
+        './src/css/*.css',
+        './src/img/*.*',
+        './src/fonts/*.*',
+        './src/js/*.js'
+      ],
+      { base: './src' }
+    )
+    .pipe(gulp.dest('./dist'));
+});
+
 gulp.task('default', ['bs']);
