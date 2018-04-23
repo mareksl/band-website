@@ -31,16 +31,59 @@
     </header>
     <main>
         <section class="content-section">
-            <div class="img-wrapper">
-                <span class="hero-text">LOREM</span>
-                <img src="img/pic1.jpg" alt="band" class="img hero-img">
+            <div class="hero-image">
+                <span class="hero-image__text">Lorem</span>
+                <img src="img/pic1.jpg" alt="band" class="img hero-image__image">
             </div>
         </section>
         <section id="about" class="content-section">
             <h2>About Us</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non reiciendis, sequi mollitia minus fugiat eligendi
-                blanditiis voluptatum unde doloribus, est odit veritatis omnis deleniti! Dolorum explicabo sapiente voluptatum
-                quod quos.</p>
+            <ul class="cards-container">
+                <li class="profile-card">
+                    <div class="profile-card__photo">
+                        <img src="http://i.pravatar.cc/256?img=68" class="img" alt="">
+                    </div>
+                    <p class="profile-card__name">
+                        John Doe
+                    </p>
+                    <p class="profile-card__role">
+                        Guitar
+                    </p>
+                </li>
+                <li class="profile-card">
+                    <div class="profile-card__photo">
+                        <img src="http://i.pravatar.cc/256?img=11" class="img" alt="">
+                    </div>
+                    <p class="profile-card__name">
+                        Alfred Pennyworth
+                    </p>
+                    <p class="profile-card__role">
+                        Bass
+                    </p>
+                </li>
+                <li class="profile-card">
+                    <div class="profile-card__photo">
+                        <img src="http://i.pravatar.cc/256?img=62" class="img" alt="">
+                    </div>
+                    <p class="profile-card__name">
+                        John Smith
+                    </p>
+                    <p class="profile-card__role">
+                        Drums
+                    </p>
+                </li>
+                <li class="profile-card">
+                    <div class="profile-card__photo">
+                        <img src="http://i.pravatar.cc/256?img=61" class="img" alt="">
+                    </div>
+                    <p class="profile-card__name">
+                        Bruce Wayne
+                    </p>
+                    <p class="profile-card__role">
+                        Piano
+                    </p>
+                </li>
+            </ul>
         </section>
         <section id="events" class="content-section">
             <h2>Events</h2>
@@ -51,7 +94,9 @@
                     <span class="event-list__date">01.01.2018</span>
                 </li>
                 <li class="event-list__item">
-                    <h3 class="event-list__title"><a href="#" class="link">Lorem Dolor</a></h3>
+                    <h3 class="event-list__title">
+                        <a href="#" class="link">Lorem Dolor</a>
+                    </h3>
                     <span class="event-list__location">Gdańsk</span>
                     <span class="event-list__date">01.01.2018</span>
                 </li>

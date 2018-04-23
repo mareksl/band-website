@@ -1,8 +1,10 @@
 @import './base/colors';
 @import './base/reset';
 @import './base/typography';
+@import './utils/animations';
 
 @import './layout/grid';
 @import './components/header';
 @import './components/content';
 @import './components/event-list';
+@import './components/profile-card';

@@ -1,0 +1,33 @@
+@keyframes glitch {
+  0% {
+    filter: blur(0);
+    transform: translateX(0) translateY(0);
+  }
+  33% {
+    filter: blur(0.25rem);
+    transform: translateX(2px) translateY(2px);
+  }
+  60% {
+    filter: blur(0rem);
+    transform: translateX(-4px) translateY(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  76% {
+    opacity: 0;
+  }
+  90% {
+    filter: blur(0.125rem);
+    transform: translateX(4px) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    filter: blur(0);
+    transform: translateX(0) translateY(0);
+  }
+}

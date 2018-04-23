@@ -23,6 +23,7 @@ h1 {
 
 h2 {
   font-size: 1.953em;
+  padding-bottom: 2 * 1.953rem;
 }
 
 h3 {
@@ -51,7 +52,7 @@ a {
   &:hover,
   &:focus {
     color: $secondary-color;
-    text-shadow: 1px 1px 0.125rem $primary-color, -1px 1px 0 white,
-      1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white;
+    text-shadow: 1px 1px 0.125rem $primary-color, -1px 1px 0 $secondary-color-text,
+      1px 1px 0 $secondary-color-text, 1px -1px 0 $secondary-color-text, -1px -1px 0 $secondary-color-text;
   }
 }
