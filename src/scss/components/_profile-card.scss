@@ -17,6 +17,10 @@
   padding: 1rem;
   flex: 0 0 auto;
   border-radius: 0.5rem;
+  transition: .2s;
+  &:hover {
+    transform: scale(1.2)
+  }
 }
 
 .profile-card__photo {
