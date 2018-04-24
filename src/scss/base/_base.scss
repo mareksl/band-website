@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.img {
+  width: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.main {
+  margin-top: 5rem;
+}
+
+@media screen and (min-width: $breakpoint) {
+  .main {
+    margin-top: 9rem;
+  }
+}
+
+.content-section {
+  position: relative;
+  padding: 1rem;
+  margin: 1rem;
+}

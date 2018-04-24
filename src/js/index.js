@@ -1,7 +1,7 @@
 (function() {
   const getViewport = () => {
-    var e = window,
-      a = 'inner';
+    let e = window;
+    let a = 'inner';
     if (!('innerWidth' in window)) {
       a = 'client';
       e = document.documentElement || document.body;
@@ -9,8 +9,8 @@
     return { width: e[a + 'Width'], height: e[a + 'Height'] };
   };
 
-  const getScroll = function() {
-    if (window.pageYOffset != undefined) {
+  const getScrollPosition = function() {
+    if (window.pageYOffset !== undefined) {
       return { left: pageXOffset, top: pageYOffset };
     } else {
       var sx,
@@ -31,6 +31,7 @@
   const header = document.querySelector('.site-header');
   const nav = document.querySelector('.site-header__nav');
   const toggleMenu = document.querySelector('.site-header__toggle-menu');
+  const navLinks = nav.querySelectorAll('a');
 
   const navHiddenClass = 'site-header__nav--hidden';
   const toggleMenuHiddenClass = 'site-header__toggle-menu--hidden';
@@ -95,8 +96,6 @@
     }
   });
 
-  const navLinks = nav.querySelectorAll('a');
-
   navLinks.forEach(link => {
     link.addEventListener('click', e => {
       hideNav();
@@ -107,13 +106,12 @@
   const borderPos = heroSection.offsetTop + heroSection.offsetHeight;
 
   const past = {
-    down: getScroll().top > borderPos,
-    up: getScroll().top < borderPos
+    down: getScrollPosition().top > borderPos,
+    up: getScrollPosition().top < borderPos
   };
 
   toggleNarrowHeader = () => {
-    console.log(getScroll().top)
-    const top = getScroll().top;
+    const top = getScrollPosition().top;
     if (!past.down && top > borderPos) {
       past.down = true;
       past.up = false;
