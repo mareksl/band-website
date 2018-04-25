@@ -139,9 +139,6 @@ body {
   line-height: 1.45;
   font-family: 'Montserrat', sans-serif; }
 
-p {
-  margin-bottom: 1.3em; }
-
 h1 {
   font-size: 2.441em; }
 
@@ -155,8 +152,7 @@ h3 {
 h4 {
   font-size: 1.25em; }
 
-small,
-.font_small {
+small {
   font-size: 0.8em; }
 
 a {
@@ -178,20 +174,27 @@ a {
 .img {
   width: 100%; }
 
+.icon {
+  height: 1rem;
+  width: 1rem; }
+
 body {
   height: 100%; }
 
 .main {
-  margin-top: 5rem; }
-
-@media screen and (min-width: 48rem) {
-  .main {
-    margin-top: 9rem; } }
+  margin-top: 4.5rem; }
 
 .content-section {
   position: relative;
   padding: 1rem;
   margin: 1rem; }
+
+@media screen and (min-width: 48rem) {
+  .main {
+    margin-top: 8.3rem; }
+  .content-section {
+    padding: 2rem;
+    margin: 2rem; } }
 
 @keyframes glitch {
   0% {
@@ -339,14 +342,14 @@ body {
     box-shadow: none;
     flex: initial; } }
 
-.hero-image {
+.hero-section {
   position: relative;
   max-height: 32rem;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center; }
-  .hero-image::after {
+  .hero-section::after {
     content: '';
     position: absolute;
     top: 0;
@@ -357,7 +360,7 @@ body {
     background: linear-gradient(145deg, #03003b 0%, #00ff7c 100%);
     opacity: 0.5; }
 
-.hero-image__text {
+.hero-section__text {
   display: block;
   font-size: 10vw;
   position: absolute;
@@ -365,13 +368,8 @@ body {
   text-transform: uppercase;
   z-index: 1; }
 
-.hero-image__image {
+.hero-section__image {
   filter: grayscale(1); }
-
-@media screen and (min-width: 48rem) {
-  .content-section {
-    padding: 2rem;
-    margin: 2rem; } }
 
 .cards-container {
   width: 100%;
@@ -385,13 +383,12 @@ body {
   justify-content: space-between;
   flex-flow: column;
   background-color: white;
-  box-shadow: 0 0.5rem 1rem -0.5rem #03003b;
+  box-shadow: 0 0.5rem 2rem -1rem #03003b;
   min-height: 16rem;
   width: 16rem;
   margin: 1rem 2rem;
   padding: 1rem;
   flex: 0 0 auto;
-  border-radius: 0.5rem;
   transition: 0.2s;
   z-index: 0; }
   .profile-card:hover {
@@ -408,7 +405,7 @@ body {
   overflow: hidden;
   width: 12rem;
   height: 12rem;
-  border-radius: 50%;
+  border-radius: 1rem;
   box-shadow: inset 0 0 1rem #03003b;
   margin: 1rem; }
   .profile-card__photo > img {
@@ -437,7 +434,9 @@ body {
 
 .event-list {
   display: flex;
-  flex-flow: column; }
+  flex-flow: column;
+  width: 100%;
+  align-items: center; }
 
 .event-list__item {
   position: relative;
@@ -447,7 +446,8 @@ body {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0.5rem 1.5rem -1rem #03003b; }
+  box-shadow: 0 0.5rem 1rem -1rem #03003b;
+  width: 100%; }
   .event-list__item:last-of-type {
     margin-bottom: 0; }
 
@@ -466,3 +466,67 @@ body {
   padding: 1rem;
   text-align: right;
   flex: 0 1 33%; }
+
+.contacts-list {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start; }
+
+.contacts-list__item {
+  overflow: hidden;
+  box-shadow: 0 0.5rem 2rem -1rem #03003b;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  margin: 1rem 0;
+  padding: 1rem;
+  flex: 1 1 auto; }
+
+.contact-title {
+  text-align: center;
+  padding: 0.5rem; }
+
+.contact-title__role {
+  font-weight: bold; }
+
+.contact-title__name {
+  display: block; }
+
+.contact-title__name--roleless {
+  font-weight: bold; }
+
+.contact__phone {
+  word-wrap: break-word;
+  word-break: break-all;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem; }
+
+.contact__email {
+  word-wrap: break-word;
+  word-break: break-all;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem; }
+
+.contact__website {
+  word-wrap: break-word;
+  word-break: break-all;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem; }
+
+.contact-icon {
+  margin-right: 0.5rem; }
+
+@media screen and (min-width: 30rem) {
+  .contacts-list__item {
+    margin: 1rem; } }
+
+.site-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem; }

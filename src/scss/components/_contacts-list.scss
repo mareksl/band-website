@@ -1,0 +1,64 @@
+.contacts-list {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contacts-list__item {
+  overflow: hidden;
+  @include box-shadow;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  margin: 1rem 0;
+  padding: 1rem;
+  flex: 1 1 auto;
+}
+
+.contact-title {
+  text-align: center;
+  padding: 0.5rem;
+}
+.contact-title__role {
+  font-weight: bold;
+}
+
+.contact-title__name {
+  display: block;
+}
+.contact-title__name--roleless {
+  font-weight: bold;
+}
+.contact__phone {
+  word-wrap: break-word;
+  word-break: break-all;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+.contact__email {
+  word-wrap: break-word;
+  word-break: break-all;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+.contact__website {
+  word-wrap: break-word;
+  word-break: break-all;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.contact-icon {
+  margin-right: 0.5rem;
+}
+
+@media screen and (min-width: $breakpoint-contacts) {
+  .contacts-list__item {
+    margin: 1rem;
+  }
+}

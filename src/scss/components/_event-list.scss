@@ -1,6 +1,8 @@
 .event-list {
   display: flex;
   flex-flow: column;
+  width: 100%;
+  align-items: center;
 }
 
 .event-list__item {
@@ -11,7 +13,8 @@
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0.5rem 1.5rem -1rem $secondary-color;
+  box-shadow: 0 0.5rem 1rem -1rem $secondary-color;
+  width: 100%;
   &:last-of-type {
     margin-bottom: 0;
   }

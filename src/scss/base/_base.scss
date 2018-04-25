@@ -7,22 +7,31 @@
   width: 100%;
 }
 
+.icon {
+  height: 1rem;
+  width: 1rem;
+}
+
 body {
   height: 100%;
 }
 
 .main {
-  margin-top: 5rem;
-}
-
-@media screen and (min-width: $breakpoint) {
-  .main {
-    margin-top: 9rem;
-  }
+  margin-top: 4.5rem;
 }
 
 .content-section {
   position: relative;
   padding: 1rem;
   margin: 1rem;
+}
+
+@media screen and (min-width: $breakpoint) {
+  .main {
+    margin-top: 8.3rem;
+  }
+  .content-section {
+    padding: 2rem;
+    margin: 2rem;
+  }
 }

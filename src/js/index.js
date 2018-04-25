@@ -1,4 +1,6 @@
 (function() {
+  'use strict';
+
   const getViewport = () => {
     let e = window;
     let a = 'inner';
@@ -110,7 +112,7 @@
     up: getScrollPosition().top < borderPos
   };
 
-  toggleNarrowHeader = () => {
+  const toggleNarrowHeader = () => {
     const top = getScrollPosition().top;
     if (!past.down && top > borderPos) {
       past.down = true;
@@ -133,6 +135,6 @@
       }, 200);
     }
   };
-  toggleNarrowHeader();
   window.addEventListener('scroll', scrollThrottler);
+  toggleNarrowHeader();
 })();

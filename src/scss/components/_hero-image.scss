@@ -1,4 +1,4 @@
-.hero-image {
+.hero-section {
   position: relative;
   max-height: 32rem;
   overflow: hidden;
@@ -21,7 +21,7 @@
     opacity: 0.5;
   }
 }
-.hero-image__text {
+.hero-section__text {
   display: block;
   font-size: 10vw;
   position: absolute;
@@ -29,13 +29,7 @@
   text-transform: uppercase;
   z-index: 1;
 }
-.hero-image__image {
+.hero-section__image {
   // filter: hue-rotate(150deg);
   filter: grayscale(1);
-}
-@media screen and (min-width: 48rem) {
-  .content-section {
-    padding: 2rem;
-    margin: 2rem;
-  }
 }

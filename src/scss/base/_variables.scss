@@ -1,1 +1,6 @@
 $breakpoint: 48rem;
+$breakpoint-contacts: 30rem;
+
+@mixin box-shadow {
+  box-shadow: 0 0.5rem 2rem -1rem $secondary-color;
+}

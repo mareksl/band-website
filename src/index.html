@@ -16,7 +16,7 @@
             <a class="site-header__link link" href="#">Lorem</a>
         </h1>
         <button class="site-header__toggle-menu site-header__toggle-menu--hidden">
-            <!-- <img class="img" src="./img/icons/menu.svg" alt="menu"> -->
+            <!-- <img class="icon" src="./img/icons/menu.svg" alt="menu"> -->
             ☰
         </button>
         <nav class="site-header__nav">
@@ -34,11 +34,9 @@
         </nav>
     </header>
     <main class="main">
-        <section class="content-section hero-section">
-            <div class="hero-image">
-                <span class="hero-image__text">Lorem</span>
-                <img src="img/pic1.jpg" alt="band" class="img hero-image__image">
-            </div>
+        <section class="hero-section">
+                <h2 class="hero-section__text">Lorem</h2>
+                <img src="img/pic1.jpg" alt="band" class="img hero-section__image">
         </section>
         <section id="about" class="content-section">
             <h2>About Us</h2>
@@ -158,11 +156,57 @@
 
         <section id="contact" class="content-section">
             <h2>Contact</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non reiciendis, sequi mollitia minus fugiat eligendi
-                blanditiis voluptatum unde doloribus, est odit veritatis omnis deleniti! Dolorum explicabo sapiente voluptatum
-                quod quos.</p>
+            <ul class="contacts-list">
+                <li class="contacts-list__item">
+                    <p class="contact-title">
+                        <span class="contact-title__name--roleless">Marek Sładczyk</span>
+                    </p>
+                    <p class="contact__email">
+                        <img class="icon contact-icon" src="img/icons/mail.svg" alt="">
+                        <span>marek@example.com</span>
+                    </p>
+                    <p class="contact__phone">
+                        <img class="icon contact-icon" src="img/icons/call.svg" alt="">
+                        <span>123 456 789</span>
+                    </p>
+                    <p class="contact__website">
+                        <img class="icon contact-icon" src="img/icons/global.svg" alt="">
+                        <a class="link" href="">https://marek.example.com</a>
+                    </p>
+                </li>
+                <li class="contacts-list__item">
+                    <p class="contact-title">
+                        <span class="contact-title__role">Manager</span>
+                        <span class="contact-title__name">Marek Sładczyk</span>
+                    </p>
+                    <p class="contact__website">
+                        <img class="icon contact-icon" src="img/icons/global.svg" alt="">
+                        <a class="link" href="">https://marek.example.com</a>
+                    </p>
+                </li>
+                <li class="contacts-list__item">
+                    <p class="contact-title">
+                        <span class="contact-title__role">Accountant</span>
+                    </p>
+                    <p class="contact__email">
+                        <img class="icon contact-icon" src="img/icons/mail.svg" alt="">
+                        <span>marek@example.com</span>
+                    </p>
+                    <p class="contact__phone">
+                        <img class="icon contact-icon" src="img/icons/call.svg" alt="">
+                        <span>123 456 789</span>
+                    </p>
+                    <p class="contact__website">
+                        <img class="icon contact-icon" src="img/icons/global.svg" alt="">
+                        <a class="link" href="">https://marek.example.com</a>
+                    </p>
+                </li>
+            </ul>
         </section>
     </main>
+    <footer class="site-footer">
+        <small>&copy; Marek Sładczyk 2018</small>
+    </footer>
     <script src="js/index.js"></script>
 </body>
 

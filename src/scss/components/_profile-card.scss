@@ -11,13 +11,12 @@
   justify-content: space-between;
   flex-flow: column;
   background-color: $secondary-color-text;
-  box-shadow: 0 0.5rem 1rem -0.5rem $secondary-color;
+  @include box-shadow;
   min-height: 16rem;
   width: 16rem;
   margin: 1rem 2rem;
   padding: 1rem;
   flex: 0 0 auto;
-  border-radius: 0.5rem;
   transition: 0.2s;
   z-index: 0;
   &:hover {
@@ -36,7 +35,7 @@
   overflow: hidden;
   width: 12rem;
   height: 12rem;
-  border-radius: 50%;
+  border-radius: 1rem;
   box-shadow: inset 0 0 1rem $secondary-color;
   margin: 1rem;
   & > img {
