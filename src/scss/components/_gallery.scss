@@ -1,0 +1,29 @@
+.gallery__wrapper {
+  width: 50%;
+  overflow: hidden;
+  padding: 0.5rem;
+  transition: .2s;
+  background-color: $secondary-color-text;
+  &:hover, &:focus {
+    transform: scale(1.1);
+    @include box-shadow;
+    z-index: 1;
+  }
+}
+
+.gallery__image {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: $breakpoint-contacts) {
+  .gallery__wrapper {
+    width: 33.333333%;
+  }
+}
+
+@media screen and (min-width: $breakpoint) {
+  .gallery__wrapper {
+    width: 25%;
+  }
+}
