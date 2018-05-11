@@ -1,0 +1,24 @@
+.about {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.about__paragraph {
+  padding: 2rem 0;
+  flex: 0 1 40rem;
+}
+
+@media screen and (min-width: $breakpoint) {
+  .about__paragraph {
+    padding: 2rem;
+    flex: 1 1 40rem;
+  }
+}
+
+@media screen and (min-width: $breakpoint-about) {
+  .about__paragraph {
+    padding: 4rem 4rem;
+    flex: 1 1 40rem;
+  }
+}

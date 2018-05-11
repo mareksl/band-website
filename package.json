@@ -5,12 +5,21 @@
   "author": "mareksl",
   "license": "MIT",
   "dependencies": {
-    "browser-sync": "^2.23.6",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^4.0.1"
+    "masonry-layout": "^4.2.1"
   },
   "scripts": {
     "dev": "gulp",
     "build": "gulp build"
+  },
+  "devDependencies": {
+    "@types/masonry-layout": "^4.2.0",
+    "browser-sync": "^2.23.6",
+    "browserify": "^16.2.2",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-typescript": "^4.0.2",
+    "tsify": "^4.0.0",
+    "typescript": "^2.8.3",
+    "vinyl-source-stream": "^2.0.0"
   }
 }
