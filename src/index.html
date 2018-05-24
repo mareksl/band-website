@@ -15,7 +15,7 @@
         <h1 class="site-header__title">
             <a class="site-header__link link" href="#">Lorem</a>
         </h1>
-        <button class="site-header__toggle-menu site-header__toggle-menu--hidden">
+        <button class="button site-header__toggle-menu site-header__toggle-menu--hidden">
             <!-- <img class="icon" src="./img/icons/menu.svg" alt="menu"> -->
             ☰
         </button>
@@ -109,32 +109,83 @@
         </section>
         <section id="gallery" class="content-section gallery-section">
             <h2>Gallery</h2>
-            <div class="gallery">
-                <a href="http://google.com" class="gallery__wrapper">
+            <div class="gallery gallery--no-js">
+                <a href="http://via.placeholder.com/1000x600" class="gallery__wrapper">
                     <img class="gallery__image" src="http://via.placeholder.com/1000x600" alt="">
                 </a>
-                <a href="http://google.com" class="gallery__wrapper">
+                <a href="http://via.placeholder.com/800x600" class="gallery__wrapper">
                     <img class="gallery__image" src="http://via.placeholder.com/800x600" alt="">
                 </a>
-                <a href="http://google.com" class="gallery__wrapper">
+                <a href="http://via.placeholder.com/600x900" class="gallery__wrapper">
                     <img class="gallery__image" src="http://via.placeholder.com/600x900" alt="">
                 </a>
-                <a href="http://google.com" class="gallery__wrapper">
+                <a href="http://via.placeholder.com/800x600" class="gallery__wrapper">
                     <img class="gallery__image" src="http://via.placeholder.com/800x600" alt="">
                 </a>
-                <a href="http://google.com" class="gallery__wrapper">
+                <a href="http://via.placeholder.com/600x900" class="gallery__wrapper">
                     <img class="gallery__image" src="http://via.placeholder.com/600x900" alt="">
                 </a>
-                <a href="http://google.com" class="gallery__wrapper">
+                <a href="http://via.placeholder.com/1000x600" class="gallery__wrapper">
                     <img class="gallery__image" src="http://via.placeholder.com/1000x600" alt="">
                 </a>
             </div>
         </section>
-        <section id="events" class="content-section">
+        <section id="events" class="content-section events">
             <h2>Events</h2>
-            <ul class="event-list">
+            <ul class="event-list" id="eventList">
                 <li class="event-list__item">
-                    <span class="event-list__title">Lorem Ipsum Dolor</span>
+                    <span class="event-list__title">
+                        <a href="#" class="link">Lorem Dolor</a>
+                    </span>
+                    <span class="event-list__location">Gdańsk</span>
+                    <span class="event-list__date">01.01.2018</span>
+                </li>
+                <li class="event-list__item">
+                    <span class="event-list__title">
+                        <a href="#" class="link">Lorem Dolor</a>
+                    </span>
+                    <span class="event-list__location">Gdańsk</span>
+                    <span class="event-list__date">01.01.2018</span>
+                </li>
+                <li class="event-list__item">
+                    <span class="event-list__title">
+                        <a href="#" class="link">Lorem Dolor</a>
+                    </span>
+                    <span class="event-list__location">Gdańsk</span>
+                    <span class="event-list__date">01.01.2018</span>
+                </li>
+                <li class="event-list__item">
+                    <span class="event-list__title">
+                        <a href="#" class="link">Lorem Dolor</a>
+                    </span>
+                    <span class="event-list__location">Gdańsk</span>
+                    <span class="event-list__date">01.01.2018</span>
+                </li>
+                <li class="event-list__item">
+                    <span class="event-list__title">
+                        <a href="#" class="link">Lorem Dolor</a>
+                    </span>
+                    <span class="event-list__location">Gdańsk</span>
+                    <span class="event-list__date">01.01.2018</span>
+                </li>
+                <li class="event-list__item">
+                    <span class="event-list__title">
+                        <a href="#" class="link">Lorem Dolor</a>
+                    </span>
+                    <span class="event-list__location">Gdańsk</span>
+                    <span class="event-list__date">01.01.2018</span>
+                </li>
+                <li class="event-list__item">
+                    <span class="event-list__title">
+                        <a href="#" class="link">Lorem Dolor</a>
+                    </span>
+                    <span class="event-list__location">Gdańsk</span>
+                    <span class="event-list__date">01.01.2018</span>
+                </li>
+                <li class="event-list__item">
+                    <span class="event-list__title">
+                        <a href="#" class="link">Lorem Dolor</a>
+                    </span>
                     <span class="event-list__location">Gdańsk</span>
                     <span class="event-list__date">01.01.2018</span>
                 </li>
@@ -195,6 +246,7 @@
                     <span class="event-list__date">01.01.2018</span>
                 </li>
             </ul>
+            <button class="button event-list__button">Show More</button>
         </section>
 
         <section id="contact" class="content-section">

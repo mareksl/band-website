@@ -1,11 +1,22 @@
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+}
+
 .gallery__wrapper {
   width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 42rem;
   overflow: hidden;
   padding: 0.5rem;
-  transition: .2s;
+  transition: 0.2s;
   background-color: $secondary-color-text;
-  &:hover, &:focus {
-    transform: scale(1.1);
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
     @include box-shadow;
     z-index: 1;
   }
@@ -13,6 +24,7 @@
 
 .gallery__image {
   width: 100%;
+  max-width: 100%;
   height: auto;
 }
 

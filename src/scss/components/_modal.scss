@@ -1,0 +1,31 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  background-color: rgba($secondary-color, 0.2);
+}
+.modal__window {
+  display: flex;
+  flex-flow: column;
+  background-color: $secondary-color-text;
+  max-width: calc(100% - 2rem);
+  max-height: calc(100% - 2rem);
+  padding: 0.5rem;
+}
+.modal__content {
+  overflow-y: auto;
+}
+.modal__image {
+  max-width: 100%;
+}
+.modal__button {
+  padding: 1rem;
+}

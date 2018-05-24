@@ -13,11 +13,7 @@
     right: 0;
     left: 0;
     background: $secondary-color;
-    background: linear-gradient(
-      145deg,
-      $secondary-color 0%,
-      $primary-color 100%
-    );
+    @include background-gradient;
     opacity: 0.5;
   }
 }

@@ -12,6 +12,7 @@
     "build": "gulp build"
   },
   "devDependencies": {
+    "del": "^3.0.0",
     "@types/masonry-layout": "^4.2.0",
     "browser-sync": "^2.23.6",
     "browserify": "^16.2.2",

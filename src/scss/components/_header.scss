@@ -24,11 +24,7 @@
     height: 100%;
     width: 100%;
     background: $secondary-color;
-    background: linear-gradient(
-      145deg,
-      $secondary-color 0%,
-      $primary-color 100%
-    );
+    @include background-gradient;
     opacity: 0.5;
     z-index: -1;
   }

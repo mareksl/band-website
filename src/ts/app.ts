@@ -6,6 +6,8 @@ import { hideNav, showNav } from './dom/dom';
 import Config from './config/config';
 import Elements from './dom/elements';
 
+import { ModalController } from './gallery/modal';
+
 const navHiddenClass = 'site-header__nav--hidden';
 const toggleMenuButtonHiddenClass = 'site-header__toggle-menu--hidden';
 
@@ -68,9 +70,13 @@ const toggleNarrowHeader = () => {
   }
 };
 
-window.addEventListener('scroll', () => {
-  scrollThrottler(toggleNarrowHeader);
-});
+window.addEventListener(
+  'scroll',
+  () => {
+    scrollThrottler(toggleNarrowHeader);
+  },
+  { passive: true }
+);
 
 window.addEventListener('load', () => {
   toggleNarrowHeader();
@@ -78,5 +84,12 @@ window.addEventListener('load', () => {
     itemSelector: '.gallery__wrapper',
     columnWidth: '.gallery__wrapper',
     percentPosition: true
+  });
+});
+const modalController = new ModalController();
+Elements.imageLinks.forEach(el => {
+  el.addEventListener('click', event => {
+    event.preventDefault();
+    modalController.open(el.href);
   });
 });

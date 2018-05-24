@@ -6,7 +6,13 @@ $secondary-color: rgba(3, 0, 59, 1);
 $secondary-color-light: rgba(0, 245, 255, 1);
 $secondary-color-text: rgba(255, 255, 255, 1);
 
-
+@mixin background-gradient {
+    background: linear-gradient(
+      145deg,
+      $secondary-color 0%,
+      $primary-color 100%
+    );
+}
 // $primary-color: rgb(104, 62, 255);
 // $primary-color-light: rgb(247, 163, 255);
 // $primary-color-text: rgba(12, 23, 19, 1);

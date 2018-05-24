@@ -16,11 +16,14 @@ const heroSection: HTMLElement = <HTMLElement>document.querySelector(
 
 const gallery: HTMLElement = <HTMLElement>document.querySelector('.gallery');
 
+const imageLinks = Array.from(gallery.querySelectorAll('a'));
+
 export default {
   header,
   nav,
   toggleMenuButton,
   navLinks,
   heroSection,
-  gallery
+  gallery,
+  imageLinks
 };
