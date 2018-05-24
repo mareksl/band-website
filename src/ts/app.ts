@@ -90,6 +90,6 @@ const modalController = new ModalController();
 Elements.imageLinks.forEach(el => {
   el.addEventListener('click', event => {
     event.preventDefault();
-    modalController.open(el.href);
+    modalController.open(el.href, el.title);
   });
 });

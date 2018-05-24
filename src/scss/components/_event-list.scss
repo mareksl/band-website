@@ -2,6 +2,7 @@
   display: flex;
   flex-flow: column;
 }
+
 .event-list {
   display: flex;
   flex-flow: column;
@@ -23,16 +24,19 @@
     margin-bottom: 0;
   }
 }
+
 .event-list__title {
   font-size: 1.25rem;
   padding: 1rem;
   flex: 1 0 33%;
 }
+
 .event-list__location {
   padding: 1rem;
   text-align: center;
   flex: 0 1 33%;
 }
+
 .event-list__date {
   font-size: 1.25rem;
   padding: 1rem;
@@ -48,27 +52,11 @@
   box-shadow: 0 0.5rem 1rem -1rem $secondary-color;
   transition: 0.2s;
   align-self: center;
-  // border-radius: 0.5rem;
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0.2;
-  }
-
   &:hover,
   &:focus {
     transform: scale(1.2);
     outline: none;
     @include box-shadow;
   }
-
-  &:active {
-    transform: scale(1.2) translateY(0.25rem);
-    box-shadow: inset 0 0.5rem 2rem -1rem $secondary-color;
-  }
+  @include button-active;
 }

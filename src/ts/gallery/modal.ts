@@ -18,17 +18,20 @@ export class ModalController {
     this.image.classList.add('modal__image');
     this.content.appendChild(this.image);
     this.closeButton = document.createElement('button');
-    this.closeButton.classList.add('button')
-    this.closeButton.classList.add('modal__button')
-    this.closeButton.innerText = 'X';
+    this.closeButton.classList.add('button');
+    this.closeButton.classList.add('modal__button');
+    this.closeButton.innerText = 'Close';
     this.closeButton.addEventListener('click', this.close);
     this.window.appendChild(this.header);
     this.window.appendChild(this.content);
     this.window.appendChild(this.closeButton);
   }
 
-  open(link: string): void {
+  open(link: string, title: string): void {
+    this.close();
     this.image.src = link;
+    this.header.innerText = title;
+
     const modal = document.createElement('div');
     modal.classList.add('modal');
     modal.appendChild(this.window);
@@ -37,8 +40,16 @@ export class ModalController {
       event => clickOutside(this.window, event, this.close),
       true
     );
+    modal.addEventListener('keyup', e => {
+      if (e.keyCode === 27) {
+        console.log('close');
+        this.close();
+      }
+    });
+    modal.tabIndex = -1;
 
     document.body.appendChild(modal);
+    modal.focus();
   }
 
   close() {
