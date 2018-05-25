@@ -135,6 +135,7 @@
         </section>
         <section id="events" class="content-section events">
             <h2>Events</h2>
+            <h3>Upcoming Events</h3>
             <ul class="event-list" id="eventList">
                 <li class="event-list__item">
                     <span class="event-list__title">
@@ -171,48 +172,9 @@
                     <span class="event-list__location">Gdańsk</span>
                     <span class="event-list__date">01.01.2018</span>
                 </li>
-                <li class="event-list__item">
-                    <span class="event-list__title">
-                        <a href="#" class="link">Lorem Dolor</a>
-                    </span>
-                    <span class="event-list__location">Gdańsk</span>
-                    <span class="event-list__date">01.01.2018</span>
-                </li>
-                <li class="event-list__item">
-                    <span class="event-list__title">
-                        <a href="#" class="link">Lorem Dolor</a>
-                    </span>
-                    <span class="event-list__location">Gdańsk</span>
-                    <span class="event-list__date">01.01.2018</span>
-                </li>
-                <li class="event-list__item">
-                    <span class="event-list__title">
-                        <a href="#" class="link">Lorem Dolor</a>
-                    </span>
-                    <span class="event-list__location">Gdańsk</span>
-                    <span class="event-list__date">01.01.2018</span>
-                </li>
-                <li class="event-list__item">
-                    <span class="event-list__title">
-                        <a href="#" class="link">Lorem Dolor</a>
-                    </span>
-                    <span class="event-list__location">Gdańsk</span>
-                    <span class="event-list__date">01.01.2018</span>
-                </li>
-                <li class="event-list__item">
-                    <span class="event-list__title">
-                        <a href="#" class="link">Lorem Dolor</a>
-                    </span>
-                    <span class="event-list__location">Gdańsk</span>
-                    <span class="event-list__date">01.01.2018</span>
-                </li>
-                <li class="event-list__item">
-                    <span class="event-list__title">
-                        <a href="#" class="link">Lorem Dolor</a>
-                    </span>
-                    <span class="event-list__location">Gdańsk</span>
-                    <span class="event-list__date">01.01.2018</span>
-                </li>
+            </ul>
+            <h3>Past Events</h3>
+            <ul class="event-list event-list--with-pagination" id="pastEventsList">
                 <li class="event-list__item">
                     <span class="event-list__title">
                         <a href="#" class="link">Lorem Dolor</a>
@@ -249,7 +211,10 @@
                     <span class="event-list__date">01.01.2018</span>
                 </li>
             </ul>
-            <button class="button event-list__button">Show More</button>
+            <div class="event-list__pagination">
+                <button class="button event-list__button" id="eventsNewer">Newer</button>
+                <button class="button event-list__button" id="eventsOlder">Older</button>
+            </div>
         </section>
 
         <section id="contact" class="content-section">

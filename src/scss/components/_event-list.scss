@@ -8,6 +8,19 @@
   flex-flow: column;
   width: 100%;
   align-items: center;
+  margin: 2rem 0 8rem 0;
+  transition: transform 1s ease-out;
+}
+
+.event-list--with-pagination {
+  margin-bottom: 2rem;
+}
+
+.event-list--off-screen-left {
+  transform: translateX(-100vw);
+}
+.event-list--off-screen-right {
+  transform: translateX(100vw);
 }
 
 .event-list__item {
@@ -44,11 +57,17 @@
   flex: 0 1 33%;
 }
 
+.event-list__pagination {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
 .event-list__button {
   position: relative;
-  display: flex;
+  flex-shrink: 0;
   padding: 1rem 2rem;
-  margin: 3rem 1rem 1rem 1rem;
+  margin: 1rem;
   box-shadow: 0 0.5rem 1rem -1rem $secondary-color;
   transition: 0.2s;
   align-self: center;

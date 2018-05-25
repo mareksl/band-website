@@ -18,6 +18,16 @@ const gallery: HTMLElement = <HTMLElement>document.querySelector('.gallery');
 
 const imageLinks = Array.from(gallery.querySelectorAll('a'));
 
+const eventsOlderButton: HTMLElement = <HTMLElement>document.querySelector(
+  '#eventsOlder'
+);
+const eventsNewerButton: HTMLElement = <HTMLElement>document.querySelector(
+  '#eventsNewer'
+);
+const pastEventsList: HTMLElement = <HTMLElement>document.querySelector(
+  '#pastEventsList'
+);
+
 export default {
   header,
   nav,
@@ -25,5 +35,8 @@ export default {
   navLinks,
   heroSection,
   gallery,
-  imageLinks
+  imageLinks,
+  eventsNewerButton,
+  eventsOlderButton,
+  pastEventsList
 };

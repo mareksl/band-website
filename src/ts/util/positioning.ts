@@ -12,7 +12,7 @@ export const getViewport: () => { width: number; height: number } = () => {
 export const getScrollPosition: () => {
   left: number;
   top: number;
-} = function() {
+} = () => {
   if (window.pageYOffset !== undefined) {
     return { left: pageXOffset, top: pageYOffset };
   } else {
@@ -22,4 +22,20 @@ export const getScrollPosition: () => {
       document.documentElement.scrollTop || document.body.scrollTop || 0;
     return { left: sx, top: sy };
   }
+};
+
+export const getElementPosition: (
+  element: HTMLElement
+) => {
+  left: number;
+  top: number;
+} = (element: HTMLElement) => {
+  const bodyRect =
+    document.documentElement.getBoundingClientRect() ||
+    document.body.getBoundingClientRect();
+  const elementRect = element.getBoundingClientRect();
+  return {
+    left: elementRect.left - bodyRect.left,
+    top: elementRect.top - bodyRect.top
+  };
 };
