@@ -52,11 +52,13 @@
   box-shadow: 0 0.5rem 1rem -1rem $secondary-color;
   transition: 0.2s;
   align-self: center;
+  @include button-ripple;
   &:hover,
   &:focus {
     transform: scale(1.2);
-    outline: none;
-    @include box-shadow;
   }
-  @include button-active;
+  &:active {
+    transform: scale(1.2) translateY(0.25rem);
+    box-shadow: 0 0 2rem -1rem $secondary-color;
+  }
 }

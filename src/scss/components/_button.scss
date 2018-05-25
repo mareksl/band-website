@@ -5,13 +5,14 @@
   font-size: 1rem;
   text-align: center;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
-@mixin button-active {
+@mixin button-ripple {
   overflow: hidden;
   &:before {
     z-index: -1;
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     left: 50%;
@@ -22,13 +23,17 @@
     background-color: rgba($primary-color, 1);
     @include background-gradient;
     transform: translate(-50%, -50%);
+    transition: width 0.2s ease-out, padding-top 0.2s ease-out;
   }
-  &:active {
+  &:hover,
+  &:focus {
     color: $secondary-color-text;
+    @include box-shadow;
+    outline: none;
+
     &:before {
       width: 120%;
       padding-top: 120%;
-      transition: width .2s ease-out, padding-top .2s ease-out;
     }
   }
 }

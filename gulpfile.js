@@ -1,10 +1,13 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const cleanCss = require('gulp-clean-css');
 const bs = require('browser-sync').create();
 
 const browserify = require('browserify');
 const source = require('vinyl-source-stream');
 const tsify = require('tsify');
+const streamify = require('gulp-streamify');
+const uglify = require('gulp-uglify');
 const del = require('del');
 
 gulp.task('ts', () => {
@@ -18,6 +21,7 @@ gulp.task('ts', () => {
     .plugin(tsify)
     .bundle()
     .pipe(source('bundle.js'))
+    .pipe(streamify(uglify()))
     .pipe(gulp.dest('dist/js'));
 });
 
@@ -32,6 +36,7 @@ gulp.task('ts-build', () => {
     .plugin(tsify)
     .bundle()
     .pipe(source('bundle.js'))
+    .pipe(streamify(uglify()))
     .pipe(gulp.dest('dist/js'));
 });
 
@@ -39,6 +44,7 @@ gulp.task('sass', () => {
   return gulp
     .src('./src/scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
+    .pipe(cleanCss())
     .pipe(gulp.dest('./dist/css'))
     .pipe(bs.stream());
 });
