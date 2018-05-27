@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const cleanCss = require('gulp-clean-css');
 const bs = require('browser-sync').create();
+const wait = require('gulp-wait');
 
 const browserify = require('browserify');
 const source = require('vinyl-source-stream');
@@ -12,12 +13,12 @@ const del = require('del');
 
 gulp.task('ts', () => {
   return browserify({
-    basedir: '.',
-    debug: true,
-    entries: ['src/ts/app.ts'],
-    cache: {},
-    packageCache: {}
-  })
+      basedir: '.',
+      debug: true,
+      entries: ['src/ts/app.ts'],
+      cache: {},
+      packageCache: {}
+    })
     .plugin(tsify)
     .bundle()
     .pipe(source('bundle.js'))
@@ -27,12 +28,12 @@ gulp.task('ts', () => {
 
 gulp.task('ts-build', () => {
   return browserify({
-    basedir: '.',
-    debug: false,
-    entries: ['src/ts/app.ts'],
-    cache: {},
-    packageCache: {}
-  })
+      basedir: '.',
+      debug: false,
+      entries: ['src/ts/app.ts'],
+      cache: {},
+      packageCache: {}
+    })
     .plugin(tsify)
     .bundle()
     .pipe(source('bundle.js'))
@@ -43,6 +44,7 @@ gulp.task('ts-build', () => {
 gulp.task('sass', () => {
   return gulp
     .src('./src/scss/**/*.scss')
+    .pipe(wait(500))
     .pipe(sass().on('error', sass.logError))
     .pipe(cleanCss())
     .pipe(gulp.dest('./dist/css'))

@@ -27,7 +27,7 @@ export class ModalController {
   }
 
   open(link: string, title: string, focusElement: HTMLElement): void {
-    this.close(focusElement);
+    this.closeWindow(focusElement);
     this.image.src = link;
     this.header.innerText = title;
     this.closeButton.addEventListener('click', () => this.close(focusElement));
@@ -50,13 +50,26 @@ export class ModalController {
 
     document.body.appendChild(modal);
     modal.focus();
+    modal.classList.add('modal--visible');
+    this.window.classList.add('modal__window--visible');
   }
 
-  close(focusElement: HTMLElement) {
+  closeWindow(focusElement: HTMLElement) {
     const modals = Array.from(document.querySelectorAll('.modal'));
     modals.forEach(modal => {
       document.body.removeChild(modal);
     });
     focusElement.focus();
+  }
+
+  close(focusElement: HTMLElement) {
+    const modal: HTMLElement = <HTMLElement>document.querySelector('.modal');
+    modal.classList.remove('modal--visible');
+    const handleClose = () => {
+      this.closeWindow(focusElement);
+    };
+    this.window.classList.remove('modal__window--visible');
+    this.window.addEventListener('transitionend', handleClose, { once: true });
+    // this.window.removeEventListener('transitionend', handleClose);
   }
 }

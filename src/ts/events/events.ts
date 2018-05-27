@@ -5,9 +5,9 @@ export class Pagination {
   page: number;
 
   constructor() {
-    this.page = 1;
+    this.page = 0;
   }
-  
+
   increment() {
     this.page++;
     const top =
@@ -17,7 +17,6 @@ export class Pagination {
       top
     });
 
-    // const width = document.documentElement.getBoundingClientRect().width;
     Elements.pastEventsList.classList.remove('event-list--off-screen-right');
     Elements.pastEventsList.classList.add('event-list--off-screen-left');
   }
@@ -31,8 +30,11 @@ export class Pagination {
       top
     });
 
-    // const width = document.documentElement.getBoundingClientRect().width;
     Elements.pastEventsList.classList.remove('event-list--off-screen-left');
     Elements.pastEventsList.classList.add('event-list--off-screen-right');
+  }
+
+  private constructPage() {
+    
   }
 }

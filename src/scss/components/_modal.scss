@@ -20,6 +20,12 @@
     @include background-gradient;
     opacity: 0.6;
   }
+  opacity: 0;
+  transition: .2s;
+}
+
+.modal--visible {
+  opacity: 1;
 }
 
 .modal__window {
@@ -29,6 +35,12 @@
   max-width: calc(100% - 2rem);
   max-height: calc(100% - 2rem); // padding: 0.5rem;
   @include box-shadow;
+  transform: scale(0);
+  transition: .2s;
+}
+
+.modal__window--visible {
+  transform: scale(1);
 }
 
 .modal__content {
@@ -64,7 +76,6 @@
     left: 0;
     bottom: 0;
   }
-
   @include button-ripple;
   &:active {
     box-shadow: 0 0 2rem -1rem $secondary-color;

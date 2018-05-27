@@ -5,6 +5,7 @@
   "author": "mareksl",
   "license": "MIT",
   "dependencies": {
+    "gulp-wait": "^0.0.2",
     "masonry-layout": "^4.2.1"
   },
   "scripts": {
