@@ -1,8 +1,10 @@
 import Elements from '../dom/elements';
 import { getElementPosition } from '../util/positioning';
+import { HttpController } from '../http/http.controller';
 
 export class Pagination {
   page: number;
+  http = new HttpController();
 
   constructor() {
     this.page = 0;
@@ -10,6 +12,7 @@ export class Pagination {
 
   increment() {
     this.page++;
+    this.constructPage();
     const top =
       getElementPosition(Elements.pastEventsList).top -
       Elements.header.offsetHeight;
@@ -23,6 +26,7 @@ export class Pagination {
 
   decrement() {
     this.page--;
+    this.constructPage();
     const top =
       getElementPosition(Elements.pastEventsList).top -
       Elements.header.offsetHeight;
@@ -34,7 +38,13 @@ export class Pagination {
     Elements.pastEventsList.classList.add('event-list--off-screen-right');
   }
 
-  private constructPage() {
-    
+  constructPage() {
+    return new Promise((resolve, reject) => {
+      this.http.getEventsDummy().then(result => {
+        result.events.forEach(event => {
+          console.log(event);
+        });
+      });
+    });
   }
 }

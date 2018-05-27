@@ -8,7 +8,9 @@ const browserify = require('browserify');
 const source = require('vinyl-source-stream');
 const tsify = require('tsify');
 const streamify = require('gulp-streamify');
-const uglify = require('gulp-uglify');
+const uglifyes = require('uglify-es');
+const composer = require('gulp-uglify/composer')
+const uglify = composer(uglifyes, console);
 const del = require('del');
 
 gulp.task('ts', () => {

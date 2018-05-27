@@ -94,12 +94,11 @@ Elements.imageLinks.forEach(el => {
     modalController.open(el.href, el.title, el);
   });
 });
+
 const eventsPagination = new Pagination();
-Elements.eventsOlderButton.addEventListener(
-  'click',
-  eventsPagination.increment
-);
-Elements.eventsNewerButton.addEventListener(
-  'click',
-  eventsPagination.decrement
-);
+Elements.eventsOlderButton.addEventListener('click', () => {
+  eventsPagination.increment();
+});
+Elements.eventsNewerButton.addEventListener('click', () => {
+  eventsPagination.decrement();
+});

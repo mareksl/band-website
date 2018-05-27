@@ -5,7 +5,6 @@
   "author": "mareksl",
   "license": "MIT",
   "dependencies": {
-    "gulp-wait": "^0.0.2",
     "masonry-layout": "^4.2.1"
   },
   "scripts": {
@@ -23,8 +22,10 @@
     "gulp-streamify": "^1.0.2",
     "gulp-typescript": "^4.0.2",
     "gulp-uglify": "^3.0.0",
+    "gulp-wait": "^0.0.2",
     "tsify": "^4.0.0",
     "typescript": "^2.8.3",
+    "uglify-es": "^3.3.9",
     "vinyl-source-stream": "^2.0.0"
   }
 }
