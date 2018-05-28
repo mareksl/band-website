@@ -9,7 +9,9 @@
   width: 100%;
   align-items: center;
   margin: 2rem 0 8rem 0;
-  transition: transform 1s ease-out;
+  transition: 1s ease-out;
+  transform: translateX(0);
+  height: auto;
 }
 
 .event-list--with-pagination {

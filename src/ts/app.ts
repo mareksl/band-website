@@ -7,7 +7,6 @@ import Config from './config/config';
 import Elements from './dom/elements';
 
 import { ModalController } from './gallery/modal';
-import { Pagination } from './events/events';
 
 const navHiddenClass = 'site-header__nav--hidden';
 const toggleMenuButtonHiddenClass = 'site-header__toggle-menu--hidden';
@@ -93,12 +92,4 @@ Elements.imageLinks.forEach(el => {
     event.preventDefault();
     modalController.open(el.href, el.title, el);
   });
-});
-
-const eventsPagination = new Pagination();
-Elements.eventsOlderButton.addEventListener('click', () => {
-  eventsPagination.increment();
-});
-Elements.eventsNewerButton.addEventListener('click', () => {
-  eventsPagination.decrement();
 });
