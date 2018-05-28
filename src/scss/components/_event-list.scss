@@ -3,6 +3,10 @@
   flex-flow: column;
 }
 
+.events__empty-message {
+  margin-bottom: 2rem;
+}
+
 .event-list {
   display: flex;
   flex-flow: column;

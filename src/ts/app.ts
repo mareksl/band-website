@@ -10,19 +10,18 @@ import {
   toggleNav
 } from './dom/dom';
 
-import { ModalController } from './gallery/modal';
-const modalController = new ModalController();
+import modalController from './gallery/modal';
 
-window.addEventListener('load', () => {
+window.addEventListener('load', e => {
   toggleNarrowHeader();
 
-  window.addEventListener('resize', () => {
+  window.addEventListener('resize', e => {
     resizeThrottler(handleResizeEvent);
   });
 
   window.addEventListener(
     'scroll',
-    () => {
+    e => {
       scrollThrottler(toggleNarrowHeader);
     },
     { passive: true }

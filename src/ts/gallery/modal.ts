@@ -1,6 +1,6 @@
 import { clickOutside } from '../util/dom';
 
-export class ModalController {
+class ModalController {
   modal: HTMLElement;
   window: HTMLElement;
   header: HTMLElement;
@@ -80,3 +80,5 @@ export class ModalController {
     focusElement.focus();
   }
 }
+
+export default new ModalController();
