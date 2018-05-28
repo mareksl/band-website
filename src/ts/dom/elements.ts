@@ -16,8 +16,6 @@ const heroSection: HTMLElement = <HTMLElement>document.querySelector(
 
 const gallery: HTMLElement = <HTMLElement>document.querySelector('.gallery');
 
-const imageLinks = Array.from(gallery.querySelectorAll('a'));
-
 const pastEventsList: HTMLElement = <HTMLElement>document.querySelector(
   '#pastEventsList'
 );
@@ -29,6 +27,5 @@ export default {
   navLinks,
   heroSection,
   gallery,
-  imageLinks,
   pastEventsList
 };

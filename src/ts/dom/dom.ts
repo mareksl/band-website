@@ -1,5 +1,5 @@
-import { clickOutside, resizeThrottler, scrollThrottler } from './../util/dom';
-import { getScrollPosition, getViewport } from './../util/positioning';
+import { clickOutside } from './../util/dom';
+import { getViewport, getScrollPosition } from './../util/positioning';
 import Config from './../config/config';
 
 import Elements from './elements';
@@ -23,4 +23,53 @@ export const hideNav = () => {
     window.removeEventListener('click', hideNavOnClickOutside, true);
     Elements.nav.classList.add(navHiddenClass);
   }
+};
+
+export const toggleNav = () => {
+  if (Elements.nav.classList.contains(navHiddenClass)) {
+    showNav();
+  } else {
+    hideNav();
+  }
+};
+
+const borderPos =
+  Elements.heroSection.offsetTop + Elements.heroSection.offsetHeight;
+
+const past = {
+  down: getScrollPosition().top > borderPos,
+  up: getScrollPosition().top < borderPos
+};
+
+export const toggleNarrowHeader = () => {
+  const top = getScrollPosition().top;
+  if (!past.down && top > borderPos) {
+    past.down = true;
+    past.up = false;
+    Elements.header.classList.add('site-header--narrow');
+  } else if (!past.up && top < borderPos) {
+    past.up = true;
+    past.down = false;
+    Elements.header.classList.remove('site-header--narrow');
+  }
+};
+
+if (getViewport().width < Config.BREAKPOINT) {
+  Elements.nav.classList.add(navHiddenClass);
+  Elements.toggleMenuButton.classList.remove(toggleMenuHiddenClass);
+}
+
+let lastWidth = getViewport().width;
+
+export const handleResizeEvent = () => {
+  const width = getViewport().width;
+
+  if (width < Config.BREAKPOINT && lastWidth >= Config.BREAKPOINT) {
+    Elements.nav.classList.add(navHiddenClass);
+    Elements.toggleMenuButton.classList.remove(toggleMenuHiddenClass);
+  } else if (width >= Config.BREAKPOINT && lastWidth < width) {
+    Elements.nav.classList.remove(navHiddenClass);
+    Elements.toggleMenuButton.classList.add(toggleMenuHiddenClass);
+  }
+  lastWidth = width;
 };

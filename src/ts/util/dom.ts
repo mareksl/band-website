@@ -29,4 +29,3 @@ export const scrollThrottler = (callback: () => void) => {
     }, 200);
   }
 };
-
