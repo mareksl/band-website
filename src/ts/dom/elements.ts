@@ -20,6 +20,17 @@ const pastEventsList: HTMLElement = <HTMLElement>document.querySelector(
   '#pastEventsList'
 );
 
+const eventListPagination: HTMLElement = <HTMLElement>document.querySelector(
+  '.event-list__pagination'
+);
+
+const showMore: HTMLElement = <HTMLElement>document.querySelector(
+  '#eventsShowMore'
+);
+const showLess: HTMLElement = <HTMLElement>document.querySelector(
+  '#eventsShowLess'
+);
+
 export default {
   header,
   nav,
@@ -27,5 +38,8 @@ export default {
   navLinks,
   heroSection,
   gallery,
-  pastEventsList
+  pastEventsList,
+  eventListPagination,
+  showMore,
+  showLess
 };

@@ -11,6 +11,7 @@ import {
 } from './dom/dom';
 
 import modalController from './gallery/modal';
+import eventsController from './events/events';
 
 window.addEventListener('load', e => {
   toggleNarrowHeader();
@@ -44,6 +45,11 @@ window.addEventListener('load', e => {
       modalController.open(target.href, target.title, target);
     }
   });
+
+  eventsController.init();
+
+  Elements.showMore.addEventListener('click', eventsController.showMore);
+  Elements.showLess.addEventListener('click', eventsController.showLess);
 
   const masonry = new Masonry(Elements.gallery, {
     itemSelector: '.gallery__wrapper',

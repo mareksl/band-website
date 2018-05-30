@@ -1,3 +1,6 @@
+import { getElementPosition } from './positioning';
+import elements from '../dom/elements';
+
 export const clickOutside = (
   element: HTMLElement,
   event: Event,
@@ -28,4 +31,12 @@ export const scrollThrottler = (callback: () => void) => {
       callback();
     }, 200);
   }
+};
+
+export const scrollToElement = (element: HTMLElement) => {
+  window.scrollTo({
+    top:
+      getElementPosition(element).top -
+      elements.header.getBoundingClientRect().height
+  });
 };
